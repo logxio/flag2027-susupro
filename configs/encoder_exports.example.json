@@ -1,0 +1,10 @@
+{
+  "registered_encoder": {
+    "modality": "voice",
+    "export_path": "weights/encoder_with_preprocessing.pt",
+    "sha256": "REPLACE_WITH_EXPORTED_FILE_SHA256",
+    "sample_rate": 16000,
+    "seconds": 6.0,
+    "slices": 3
+  }
+}

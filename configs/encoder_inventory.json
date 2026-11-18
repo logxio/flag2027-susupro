@@ -1,0 +1,116 @@
+{
+  "antelopev2": {
+    "name": "InsightFace AntelopeV2 (ResNet100)",
+    "modality": "face",
+    "source_url": "https://github.com/deepinsight/insightface",
+    "pretraining_dataset": "Glint360K",
+    "status": "Frozen pretrained backbone"
+  },
+  "buffalo_l": {
+    "name": "InsightFace Buffalo_L (ArcFace-R100)",
+    "modality": "face",
+    "source_url": "https://github.com/deepinsight/insightface",
+    "pretraining_dataset": "WebFace600K",
+    "status": "Frozen pretrained backbone"
+  },
+  "adaface_ir101": {
+    "name": "AdaFace IR-101",
+    "modality": "face",
+    "source_url": "https://github.com/mk-minchul/AdaFace",
+    "pretraining_dataset": "WebFace12M",
+    "status": "Frozen pretrained backbone"
+  },
+  "vggface": {
+    "name": "VGGFace (VGG-16 / ResNet-50)",
+    "modality": "face",
+    "source_url": "https://www.robots.ox.ac.uk/~vgg/software/vgg_face/",
+    "pretraining_dataset": "VGGFace / VGGFace2",
+    "status": "Frozen pretrained backbone"
+  },
+  "farl": {
+    "name": "FaRL ViT-B/16",
+    "modality": "face",
+    "source_url": "https://github.com/FacePerceiver/FaRL",
+    "checkpoint": "FaRL-Base-Patch16-LAIONFace20M-ep16.pth",
+    "pretraining_dataset": "LAION-Face 20M",
+    "status": "Frozen pretrained backbone"
+  },
+  "clip_vit_l14": {
+    "name": "CLIP ViT-L/14 (EVA02 / OpenAI)",
+    "modality": "face",
+    "source_url": "https://huggingface.co/openai/clip-vit-large-patch14",
+    "pretraining_dataset": "WIT-400M / LAION-2B",
+    "status": "Frozen pretrained backbone"
+  },
+  "vitage": {
+    "name": "ViT Facial Age & Demographic Predictor",
+    "modality": "face",
+    "source_url": "https://huggingface.co/nateraw/vit-age-classifier",
+    "pretraining_dataset": "FairFace",
+    "status": "Frozen demographic predictor (FAQ #10-#12)"
+  },
+  "voxb2_r293": {
+    "name": "WeSpeaker VoxBlink2 ResNet293",
+    "modality": "voice",
+    "source_url": "https://github.com/wenet-e2e/wespeaker",
+    "pretraining_dataset": "VoxBlink2 + VoxCeleb2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "simam_r100": {
+    "name": "WeSpeaker SimAM-ResNet100",
+    "modality": "voice",
+    "source_url": "https://github.com/wenet-e2e/wespeaker",
+    "pretraining_dataset": "VoxBlink2 + VoxCeleb2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "redimnet_b2": {
+    "name": "IDRnD ReDimNet-B2",
+    "modality": "voice",
+    "source_url": "https://github.com/IDRnD/ReDimNet",
+    "pretraining_dataset": "VoxCeleb2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "redimnet_v2": {
+    "name": "IDRnD ReDimNet-v2",
+    "modality": "voice",
+    "source_url": "https://github.com/IDRnD/ReDimNet",
+    "pretraining_dataset": "VoxCeleb2 + VoxBlink2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "wavlm_large": {
+    "name": "Microsoft WavLM-Large Speaker Verification",
+    "modality": "voice",
+    "source_url": "https://huggingface.co/microsoft/wavlm-large",
+    "pretraining_dataset": "94k hours English speech + VoxCeleb2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "ecapa": {
+    "name": "SpeechBrain ECAPA-TDNN",
+    "modality": "voice",
+    "source_url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+    "pretraining_dataset": "VoxCeleb1 + VoxCeleb2",
+    "status": "Frozen pretrained backbone (0 Bengali adaptation)",
+    "sample_rate": 16000
+  },
+  "audeering": {
+    "name": "audEERING wav2vec2-large-robust-24-ft-age-gender",
+    "modality": "voice",
+    "source_url": "https://huggingface.co/audeering/wav2vec2-large-robust-24-ft-age-gender",
+    "pretraining_dataset": "aGender / Mozilla Common Voice / Timit",
+    "status": "Frozen acoustic age & gender predictor (FAQ #10-#12)",
+    "sample_rate": 16000
+  },
+  "imagebind": {
+    "name": "ImageBind-Huge (Frozen Backbone + Non-Bengali Audio Projection)",
+    "modality": "multimodal",
+    "source_url": "https://github.com/facebookresearch/ImageBind",
+    "pretraining_dataset": "AudioSet / SUN RGB-D / LAION",
+    "status": "Frozen backbone; auxiliary audio-only rank-4 projection trained strictly on non-Bengali audio-visual pairs",
+    "sample_rate": 16000
+  }
+}

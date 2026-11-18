@@ -1,0 +1,94 @@
+{
+  "team": "susupro",
+  "representative": "Yan Su <hi@yansu.me>",
+  "best_submission_id": 1057629,
+  "official_mean_eer_percent": 2.129763,
+  "official_cell_eer_percent": {
+    "no_gender/English": 1.530612,
+    "no_gender/Bangla": 1.745636,
+    "gender/English": 3.846154,
+    "gender/Bangla": 1.396648
+  },
+  "local": {
+    "state": "done",
+    "reason": "complete",
+    "passed": true,
+    "runtime_healthy": true,
+    "mode": "indep",
+    "cells": {
+      "no_gender_English": {
+        "rows": 392,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0
+      },
+      "no_gender_Bangla": {
+        "rows": 802,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0
+      },
+      "gender_English": {
+        "rows": 416,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0
+      },
+      "gender_Bangla": {
+        "rows": 716,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0
+      }
+    },
+    "rows": 2326,
+    "prediction_source": "matrix_forward",
+    "archive_sha256": "69a660f98b09fe1c7071a01329b87769b1972e548d5db59269d2e7e82eeee8bf",
+    "peak_rss_bytes": 83099648
+  },
+  "linux_amd64_offline": {
+    "state": "done",
+    "reason": "complete",
+    "passed": true,
+    "runtime_healthy": true,
+    "mode": "indep",
+    "cells": {
+      "no_gender_English": {
+        "rows": 392,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0,
+        "ranking_identical": true,
+        "max_abs_diff": 1.9984014443252818e-15
+      },
+      "no_gender_Bangla": {
+        "rows": 802,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0,
+        "ranking_identical": true,
+        "max_abs_diff": 4.4364512064021255e-13
+      },
+      "gender_English": {
+        "rows": 416,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0,
+        "ranking_identical": true,
+        "max_abs_diff": 2.7200464103316335e-15
+      },
+      "gender_Bangla": {
+        "rows": 716,
+        "singleton_max_diff": 0.0,
+        "permutation_max_diff": 0.0,
+        "ranking_identical": true,
+        "max_abs_diff": 3.7192471324942744e-15
+      }
+    },
+    "rows": 2326,
+    "prediction_source": "matrix_forward",
+    "peak_rss_bytes": 109096960
+  },
+  "compliance_checks": {
+    "trial_independent_inference": true,
+    "singleton_max_diff_zero": true,
+    "permutation_max_diff_zero": true,
+    "training_only_parameter_selection": true,
+    "zero_bengali_audio_encoder_adaptation": true,
+    "zero_post_hoc_cohort_normalization": true,
+    "zero_transductive_test_processing": true
+  }
+}

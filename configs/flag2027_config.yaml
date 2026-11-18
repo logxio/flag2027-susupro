@@ -1,0 +1,50 @@
+schema: flag2027.susupro.v1
+purpose: trial-independent conditional bilinear fusion and cross-modal metric training
+seed: 20261118
+runtime:
+  threads: 1
+  memory_limit_bytes: 4294967296
+  offline_inference: true
+  trial_independent: true
+fusion:
+  model: VER_FUSE_X
+  ridge_candidates: [0.1, 1.0, 10.0]
+  x_clip: [-8, 8]
+  c_clip: [-5, 5]
+  conditioning_dimensions: 16
+  interaction_gates: 8
+  no_gender_stream_dimensions: 87
+  gender_stream_dimensions: 114
+  no_gender_design_dimensions: 853
+  gender_design_dimensions: 1120
+  missing_stream_value_after_standardization: 0
+  standard_deviation_floor: 0.000001
+  output: sigmoid_distance
+validation:
+  folds: 5
+  split: seeded_permutation_of_sorted_speaker_ids_modulo_5
+  require_both_trial_endpoints_in_held_group: true
+  exclude_both_held_endpoints_from_fit: true
+  persist_exact_identity_split: training_report.json
+  external_validation_languages: [Urdu, Hindi]
+  external_identity_overlap_allowed: false
+  upstream_feature_fit_scope_must_match_each_fold: true
+feature_adapter:
+  format: TorchScript_with_preprocessing
+  input_face: RGB_uint8_HWC
+  input_voice: mono_float32
+  audio_sample_rate: 16000
+  audio_slice_seconds: 6.0
+  audio_slice_count: 3
+  audio_slice_starts: uniform_between_zero_and_final_valid_start
+  short_audio: periodic_repeat
+  aggregation: mean_of_l2_normalized_slice_vectors_then_l2
+  encoder_export_manifest: encoder_exports.json
+training:
+  training_only_parameter_selection: true
+  bengali_audio_encoder_adaptation: false
+  post_hoc_cohort_normalization: false
+  transductive_test_processing: false
+  architecture_source_files: [models.py, model_inference.py]
+  dropouts: [0.3, 0.4, 0.5, 0.75, 0.91]
+  training_steps: 1200
